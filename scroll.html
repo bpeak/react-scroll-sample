@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0px;
+        height: 0px;
+      }
+      div {
+        margin-bottom: 15px;
+        height: 2000px;
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div>test</div>
+    <div id="div-top">top</div>
+    <div id="div-bottom">bottom</div>
+    <button id="btn-top">top</button>
+    <button id="btn-bottom">bottop</button>
+    <script>
+      document.querySelector("#btn-bottom").addEventListener("click", () => {
+        const y = document.querySelector("#div-bottom").offsetTop;
+        window.scrollTo(0, y);
+      });
+      document.querySelector("#btn-top").addEventListener("click", () => {
+        const y = document.querySelector("#div-top").offsetTop;
+        window.scrollTo(0, y);
+      });
+    </script>
+  </body>
+</html>

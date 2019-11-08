@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Link, Element } from "react-scroll";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <header>
+          <Link
+            activeClass="active"
+            to="test1"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <button>test1</button>
+          </Link>
+          <Link
+            activeClass="active"
+            to="test2"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <button>test2</button>
+          </Link>
+        </header>
+        <Element name="test1" className="element">
+          test 1<div className="con">test1</div>
+        </Element>
+
+        <Element name="test2" className="element">
+          test 2<div className="con">test2</div>
+        </Element>
+      </div>
+    );
+  }
 }
 
 export default App;

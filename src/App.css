@@ -1,22 +1,20 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
+.con {
+  border: 1px solid grey;
+  height: 2000px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+header {
+  position: -webkit-sticky; /* 사파리 브라우저 지원 */
+  position: sticky;
+  top: 0px;
+  background-color: tomato;
   color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
